@@ -24,8 +24,6 @@ This repository contains the codebase for a Django-based web application I devel
 
 ## Setup Procedure (General Outline) 🏃
 
-While specific setup instructions are beyond the scope of the provided code snippet, a typical deployment of this Django application would involve:
-
 1.  Ensuring the presence of a Python interpreter on the target system.
 2.  Installing the Django framework using the pip package manager (`pip install Django`).
 3.  Executing database migrations to establish the necessary database schema (`python manage.py migrate`).
