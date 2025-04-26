@@ -1,0 +1,16 @@
+{% extends 'all_books.html' %}
+
+{% block content %}
+<div class="main-body">
+    {% for book in books %}
+    <div class="card">
+        <h1>{{book.title}}</h1>
+                <p>{{book.author}}</p>
+                <p>{{book.rating}}</p>
+                <p>{{book.total_pages}}</p>
+                <p>percentage read</p>
+                <a href="{% url 'book_details' book.id %}" class="book-detail">View Book</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

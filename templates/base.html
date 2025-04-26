@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main_style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'logout' user.username %}" class="btn-link">Logout</a>
+        <a href="{% url 'all_books' user.username %}" class="btn-link">All books</a>
+        <a href="{% url 'user_profile' user.username %}" class="btn-link profile">User Profile</a>
+        <a href="{% url 'add_book' user.username %}">Add Book</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

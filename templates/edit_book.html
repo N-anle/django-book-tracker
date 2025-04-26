@@ -1,0 +1,28 @@
+{% extends 'add_book.html' %}
+
+{% block title %} Edit book {% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h1 class="title">Title</h1>
+        <input type="text" name="title" value="{{book.title}}">
+        <h1 class="author">Author</h1>
+        <input type="text" name="author" value="{{book.author}}">   
+        <h1>rating</h1>
+        <select name="rating" id="" sele>
+            <option value="1" {% if book.rating == 1 %}selected{% endif %}>1</option>
+            <option value="2"{% if book.rating == 2 %}selected{% endif %}>2</option>
+            <option value="3" {% if book.rating == 3 %}selected {% endif %}>3</option>
+            <option value="4" {% if book.rating == 4 %} selected {% endif %}>4</option>
+            <option value="5" {% if book.rating == 5 %} selected {% endif %}>5</option>
+        </select>
+        <h1 class="total_pages">Total Pages</h1>
+        <input type="number" name="total_pages" id="" value="{{book.total_pages}}">
+        <h1 class="current_page">Current Page</h1>
+        <input type="number" name="current_page" id="" value="{{book.current_page}}">
+        <h1 class="category">Category</h1>
+        <input type="text" name = 'category' value="{{book.category}}">
+        <button type="submit">Add Book</button>
+    </form>
+{% endblock %}

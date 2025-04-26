@@ -1,0 +1,20 @@
+{% extends 'all_books.html' %}
+
+{% block title %}{{book.title}}{% endblock %}
+
+{% block content %}
+    <h1>Title</h1>
+    <p>{{book.title}}</p>
+    <h1>Author</h1>
+    <p>{{book.author}}</p>
+    <h1>Rating</h1>
+    <p>{{book.rating}}</p>
+    <h1>Total Pages</h1>
+    <p>{{book.total_pages}}</p>
+    <h1>Current Page</h1>
+    <p>{{book.current_page}}</p>
+    <h1>Category</h1>
+    <p>{{book.category}}</p>
+
+    <a href="{% url 'edit_book' book.id %}">Edit Book</a>
+{% endblock %}

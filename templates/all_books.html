@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main-body">
+    <div class="all-books">
+        <nav>
+            <form class="search-function" action="{% url 'all_books' request.user %}" method="get">
+                {% csrf_token %}
+                <input type="text" name = 'search_query' value="{{ request.GET.query }}">
+                <button type="submit" >Search<img src=""></button>
+            </form>
+        </nav>
+        <h1>Welcome {{user.username}}</h1>
+        <h1>All Books</h1>
+        {% for book in books %}
+            <div class="card">
+                <h1>{{book.title}}</h1>
+                <p>{{book.author}}</p>
+                <p>{{book.rating}}</p>
+                <p>{{book.total_pages}}</p>
+                <p>percentage read</p>
+                <p><a href="{% url 'category_search'  book.category %}">{{book.category}}</a></p>
+                <a href="{% url 'book_details' book.id %}" class="book-detail">View Book</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

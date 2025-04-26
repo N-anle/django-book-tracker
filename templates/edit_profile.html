@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main-content">
+        <form method="post">
+            {% csrf_token %}
+            <h1>New Username</h1>
+            <input type="text" name="username">
+            <h1>New Password</h1>
+            <input type="password" name = 'password'>
+
+            <button type="submit">Edit Profile</button>
+        </form>
+    </div>
+{% endblock %}
