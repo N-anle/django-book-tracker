@@ -12,7 +12,7 @@ This repository contains the codebase for a Django-based web application I devel
     * **Deletion:** Removing unwanted book records from their collection. 🗑️
 * **Reading Progress Indication:** The application automatically determines and displays the completion status of a book based on the comparison between the current page and the total page count. 💯
 * **Search Capability:** Users can efficiently search their book inventory by either the title of the book or the name of the author. 🔍
-* **Categorization and Filtering:** Books can be categorized by the user, enabling the filtering and display of books belonging to specific genres or classifications. <0xF0><0x9F><0x97><0x82>️
+* **Categorization and Filtering:** Books can be categorized by the user, enabling the filtering and display of books belonging to specific genres or classifications. 
 * **Personalized User Profile:** Each user has a dedicated profile page providing an overview of their entire book collection, including separate listings for books currently being read and those that have been completed. 🤓
 * **Account Modification:** Users possess the ability to update their account credentials, specifically their username and password, through the profile settings. 😉
 * **Detailed Book Information:** A dedicated view is available for each book record, presenting a comprehensive overview of its attributes. 📖
